@@ -1,6 +1,6 @@
 import React from 'react'
-import Title from '../Title/Title'
-import CustomButtons from '../Button/CustomButtons'
+import Title from '../../components/Title/Title'
+import CustomButtons from '../../components/Button/CustomButtons'
 
 const PageComp1 = ({ sound, setSound }) => {
   return (
