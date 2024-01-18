@@ -1,0 +1,25 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+  font-size: 100%;
+  list-style-type: none;
+  margin: 0;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
