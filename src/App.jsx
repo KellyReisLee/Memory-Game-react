@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import Wrapper from './components/Wrapper'
 import './App.css'
 
 function App() {
@@ -7,7 +7,9 @@ function App() {
 
   return (
     <section className='app'>
-      <h1>Hello!</h1>
+      <Wrapper>
+        Hello
+      </Wrapper>
     </section>
   )
 }
