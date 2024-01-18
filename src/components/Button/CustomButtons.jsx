@@ -8,8 +8,9 @@ import QuestionMarkRoundedIcon from '@mui/icons-material/QuestionMarkRounded';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import './CustomButtons.css'
 
-export default function CustomButtons({ sound }) {
+export default function CustomButtons({ sound, setSound }) {
   // replace this with your state or prop
+
 
   const BUTTONS = [
     {
