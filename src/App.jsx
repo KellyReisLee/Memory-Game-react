@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Wrapper from './components/Wrapper'
 import Button from './components/Button';
 import './App.css'
+import Title from './components/Title';
 import VolumeUpRoundedIcon from '@mui/icons-material/VolumeUpRounded';
 import VolumeOffRoundedIcon from '@mui/icons-material/VolumeOffRounded';
 import MusicNoteRoundedIcon from '@mui/icons-material/MusicNoteRounded';
@@ -66,7 +67,7 @@ function App() {
       <Wrapper>
         <div className='container'>
           <div>
-            <h1>Memory Game</h1>
+            <Title text='Memory Game' />
             <h3>Monsters</h3>
           </div>
           <div className='flex-icon-btns'>
