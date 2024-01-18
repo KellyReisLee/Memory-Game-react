@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import Wrapper from './components/Wrapper'
-import Button from './components/Button';
-import './App.css'
-import Title from './components/Title';
+import Wrapper from './components/Wrapper/Wrapper'
+import Button from './components/Button/Button';
+import Title from './components/Title/Title';
+import ContainerContent from './components/ContainerContent/ContainerContent';
+import './App.css';
 import VolumeUpRoundedIcon from '@mui/icons-material/VolumeUpRounded';
 import VolumeOffRoundedIcon from '@mui/icons-material/VolumeOffRounded';
 import MusicNoteRoundedIcon from '@mui/icons-material/MusicNoteRounded';
@@ -10,6 +11,7 @@ import MusicOffRoundedIcon from '@mui/icons-material/MusicOffRounded';
 import AllOutRoundedIcon from '@mui/icons-material/AllOutRounded';
 import QuestionMarkRoundedIcon from '@mui/icons-material/QuestionMarkRounded';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
+
 
 
 
@@ -65,7 +67,7 @@ function App() {
   return (
     <section className='app'>
       <Wrapper>
-        <div className='container'>
+        <ContainerContent>
           <div>
             <Title text='Memory Game' />
             <h3>Monsters</h3>
@@ -76,7 +78,7 @@ function App() {
             ))}
 
           </div>
-        </div>
+        </ContainerContent>
       </Wrapper>
     </section>
   )
