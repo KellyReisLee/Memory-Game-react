@@ -1,0 +1,15 @@
+.box-info{
+  width: 70%;
+  height: 27%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  border: 3px solid rgb(102, 90, 182);
+  border-radius: 15px; 
+}
+.box-info h2{
+  font-size: 4rem;
+  color: rgb(102, 90, 182);
+}

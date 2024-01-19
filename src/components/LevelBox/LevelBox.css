@@ -8,11 +8,14 @@
   padding: 1rem 4rem;
   gap: 1rem;
   grid-template-rows: auto;
+
 }
 
 .level-box button{
   border-radius: 15px;
-  background-size:contain;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-image: url('../../assets/question.png');
   
 }

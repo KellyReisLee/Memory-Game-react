@@ -1,0 +1,10 @@
+.box-levelUp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  background-color: aquamarine;
+  gap: 3rem;
+}
