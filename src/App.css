@@ -9,18 +9,4 @@ section{
   
 }
 
-.container{ 
-  display: flex;
-  flex-direction: column;
-  justify-content:space-around;
-  gap: 1rem;
-  align-items: center;
-  background-color: blueviolet;
-  width: 95%;
-  height: 90%;
-}
 
-.container h3{
-  font-size: 4rem;
-  color: rgb(212, 208, 208);
-}
