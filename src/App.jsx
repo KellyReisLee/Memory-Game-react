@@ -2,12 +2,15 @@
 import Wrapper from './components/Wrapper/Wrapper'
 import ContainerContent from './components/ContainerContent/ContainerContent';
 import PageComp1 from '../src/PagesComp/PageComp1/PageComp1';
-import { useState } from 'react'
-
-import './App.css';
+import CardsMemory from './components/CardsMemory/CardsMemory';
 import LevelBox from './components/LevelBox/LevelBox';
 import Title from './components/Title/Title';
 import TimeOver from './components/TimeOver/TimeOver';
+import { useState } from 'react'
+
+import './App.css';
+
+
 import VolumeUpRoundedIcon from '@mui/icons-material/VolumeUpRounded';
 import VolumeOffRoundedIcon from '@mui/icons-material/VolumeOffRounded';
 import MusicNoteRoundedIcon from '@mui/icons-material/MusicNoteRounded';
@@ -21,7 +24,7 @@ import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import CardsMemory from './components/CardsMemory/CardsMemory';
+import PauseRoundedIcon from '@mui/icons-material/PauseRounded';
 
 
 
@@ -40,8 +43,8 @@ function App() {
   const btnInfo = (<EmojiEventsRoundedIcon sx={{ fontSize: 40 }} />)
   const btnNextLevel = (<ArrowForwardRoundedIcon sx={{ fontSize: 40 }} />)
   const btnReload = (<ReplayRoundedIcon sx={{ fontSize: 40 }} />)
-  let btnHome = (<HomeRoundedIcon sx={{ fontSize: 40 }} />)
-
+  const btnHome = (<HomeRoundedIcon sx={{ fontSize: 40 }} />)
+  const btnPause = sound ? (<PlayArrowRoundedIcon sx={{ fontSize: 40 }} />) : (<PauseRoundedIcon sx={{ fontSize: 40 }} />)
 
 
 
@@ -59,12 +62,15 @@ function App() {
         {changePages === 'LevelUp' && (
           <LevelUp setChangePage={setChangePage} btnMenu={btnMenu} btnInfo={btnInfo} btnNextLevel={btnNextLevel} />
         )}
-        {changePages === 'CardsMemory' && <CardsMemory btnMenu={btnMenu} />}
         {
           changePages === 'TimeOver' && (
             <TimeOver setChangePage={setChangePage} btnHome={btnHome} btnReload={btnReload} btnInfo={btnInfo} />
           )
         }
+        {changePages === 'CardsMemory' && <CardsMemory setChangePage={setChangePage} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
+
+
+
 
       </Wrapper>
 

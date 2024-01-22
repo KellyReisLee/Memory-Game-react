@@ -1,63 +1,137 @@
+import monster1 from './assets/monsters/monster-1.png'
+import monster2 from './assets/monsters/monster-2.png'
+import monster3 from './assets/monsters/monster-3.png'
+import monster4 from './assets/monsters/monster-4.png'
+import monster5 from './assets/monsters/monster-5.png'
+import monster6 from './assets/monsters/monster-6.png'
+import monster7 from './assets/monsters/monster-7.png'
+import monster8 from './assets/monsters/monster-8.png'
+import monster9 from './assets/monsters/monster-9.png'
+import monster10 from './assets/monsters/monster-10.png'
+import monster11 from './assets/monsters/monster-11.png'
+import monster12 from './assets/monsters/monster-12.png'
+
+
 const monsters = [
   {
     id: 1,
     name: 'monster1',
-    img: './assets/monsters/monster-1.png'
+    img: monster1
   },
   {
     id: 2,
     name: 'monster2',
-    img: './assets/monsters/monster-2.png'
+    img: monster2
   },
   {
     id: 3,
     name: 'monster3',
-    img: './assets/monsters/monster-3.png'
+    img: monster3
   },
   {
     id: 4,
     name: 'monster4',
-    img: './assets/monsters/monster-4.png'
+    img: monster4
   },
   {
     id: 5,
     name: 'monster5',
-    img: './assets/monsters/monster-5.png'
+    img: monster5
   },
   {
     id: 6,
     name: 'monster6',
-    img: './assets/monsters/monster-6.png'
+    img: monster6
   },
   {
     id: 7,
     name: 'monster7',
-    img: './assets/monsters/monster-7.png'
+    img: monster7
   },
   {
     id: 8,
     name: 'monster8',
-    img: './assets/monsters/monster-8.png'
+    img: monster8
   },
   {
     id: 9,
     name: 'monster9',
-    img: './assets/monsters/monster-9.png'
+    img: monster9
   },
   {
     id: 10,
     name: 'monster10',
-    img: './assets/monsters/monster-10.png'
+    img: monster10
   },
   {
     id: 11,
     name: 'monster11',
-    img: './assets/monsters/monster-11.png'
+    img: monster11
   },
   {
     id: 12,
     name: 'monster12',
-    img: './assets/monsters/monster-12.png'
+    img: monster12
+  },
+  {
+    id: 13,
+    name: 'monster1',
+    img: monster1
+  },
+  {
+    id: 14,
+    name: 'monster2',
+    img: monster2
+  },
+  {
+    id: 15,
+    name: 'monster3',
+    img: monster3
+  },
+  {
+    id: 16,
+    name: 'monster4',
+    img: monster4
+  },
+  {
+    id: 17,
+    name: 'monster5',
+    img: monster5
+  },
+  {
+    id: 18,
+    name: 'monster6',
+    img: monster6
+  },
+  {
+    id: 19,
+    name: 'monster7',
+    img: monster7
+  },
+  {
+    id: 20,
+    name: 'monster8',
+    img: monster8
+  },
+  {
+    id: 21,
+    name: 'monster9',
+    img: monster9
+  },
+  {
+    id: 22,
+    name: 'monster10',
+    img: monster10
+  },
+  {
+    id: 23,
+    name: 'monster11',
+    img: monster11
+  },
+  {
+    id: 24,
+    name: 'monster12',
+    img: monster12
   }
 ]
 

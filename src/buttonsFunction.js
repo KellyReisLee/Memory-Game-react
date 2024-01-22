@@ -43,6 +43,11 @@ export function handleHome() {
   console.log('Home');
 }
 
+
+export function handlePause() {
+  console.log('Pause');
+}
+
 // On Levels Component:
 export function handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels, setChangePage) {
   console.log(addingLevels);
