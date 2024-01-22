@@ -13,11 +13,16 @@
 
 .level-box button{
   border-radius: 15px;
-  background-size:cover;
+  background-size:auto;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url('../../assets/question.png');
+  /* background-position: center center; */
+  /* background-image: url('../../assets/question.png'); */
   
+  
+}
+
+.level-box img{
+  width: 100%;
   
 }
 

@@ -3,8 +3,10 @@ import './LevelBox.css'
 import Title from '../Title/Title';
 import Buttons from '../../components/Buttons/Buttons'
 import { handleMenu, handleactiveLevel } from "../../buttonsFunction";
-import monsters from '../../monstersArray';
+import numbers from '../../numbersList'
+import number from '../../assets/numbers/number-1.png'
 
+console.log(numbers);
 
 
 const LevelBox = ({ btnMenu }) => {
@@ -20,12 +22,12 @@ const LevelBox = ({ btnMenu }) => {
   return (
     <>
       <Title text='Levels' />
+      {/* <img src={number} /> */}
       <div div className='level-box'>
-        {arrayLevel}
+        {numbers.map((item) => <button onClick={() => handleactiveLevel(item.id, setActiveBtn)} key={item.id} className={item.id === 1 ? `item-${item.id} ` : `item-${item.id} activeLevel`} disabled={addingLevels.includes(item.id) ? false : true} ><img src={item.img} /> </button>)}
       </div>
       <div className='btn-menu-div'>
         <Buttons className='btn-menu' icon={btnMenu} onAction={handleMenu} />
-        {monsters.map((item) => <img key={item.id} src={item.img} />)}
       </div>
     </>
   )
