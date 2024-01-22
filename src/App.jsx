@@ -36,7 +36,7 @@ function App() {
   const btnInfo = (<EmojiEventsRoundedIcon sx={{ fontSize: 40 }} />)
   const btnNextLevel = (<ArrowForwardRoundedIcon sx={{ fontSize: 40 }} />)
   const btnReload = (<ReplayRoundedIcon sx={{ fontSize: 40 }} />)
-  const btnHome = (<HomeRoundedIcon sx={{ fontSize: 40 }} />)
+  let btnHome = (<HomeRoundedIcon sx={{ fontSize: 40 }} />)
 
 
 
@@ -47,9 +47,9 @@ function App() {
         {/* <ContainerContent>
           <PageComp1 btnSound={btnSound} btnMusic={btnMusic} btnExpand={btnExpand} btnHelp={btnHelp} btnPlay={btnPlay} />
         </ContainerContent> */}
-        {/* <LevelBox btnMenu={btnMenu} /> */}
+        <LevelBox btnMenu={btnMenu} />
         {/* <LevelUp btnMenu={btnMenu} btnInfo={btnInfo} btnNextLevel={btnNextLevel} /> */}
-        <TimeOver btnHome={btnHome} btnReload={btnReload} btnInfo={btnInfo} />
+        {/* <TimeOver btnHome={btnHome} btnReload={btnReload} btnInfo={btnInfo} /> */}
 
       </Wrapper>
     </section>

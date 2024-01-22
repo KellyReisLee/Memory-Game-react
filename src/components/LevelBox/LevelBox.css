@@ -18,11 +18,17 @@
   background-position: center center;
   background-image: url('../../assets/question.png');
   
+  
 }
 
-/* .item-1{
-  grid-area: 1;
-} */
+.activeLevel{
+  filter: grayscale(70%);
+}
+
+.nonActive{
+  filter:none;
+}
+
 /*   {
   grid-row: 1 ;
 }

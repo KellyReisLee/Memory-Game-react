@@ -41,6 +41,10 @@ export function handleHome() {
   console.log('Home');
 }
 
+// On Levels Component:
+export function handleactiveLevel(i, setActiveBtn) {
+  console.log(i);
+}
 
 
 
