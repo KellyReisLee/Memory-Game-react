@@ -14,11 +14,13 @@ export function handleHelp() {
   console.log('Help');
 }
 
-export function handlePlay() {
+export function handlePlay(setChangePage) {
+  setChangePage('Levels')
   console.log('Play');
 }
 
-export function handleMenu() {
+export function handleMenu(setChangePage) {
+  setChangePage('Home')
   console.log('Menu');
 }
 
@@ -42,7 +44,20 @@ export function handleHome() {
 }
 
 // On Levels Component:
-export function handleactiveLevel(i, setActiveBtn) {
+export function handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels, setChangePage) {
+  console.log(addingLevels);
+  setAddingLevels((prev) => {
+    if (addingLevels.includes(i)) {
+      return prev
+    } else {
+      return [...prev, i]
+    }
+
+  })
+
+  // setActiveBtn(() => !setActiveBtn)
+  setChangePage('CardsMemory')
+
   console.log(i);
 }
 

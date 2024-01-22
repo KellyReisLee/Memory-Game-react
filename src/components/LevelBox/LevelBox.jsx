@@ -6,15 +6,15 @@ import { handleMenu, handleactiveLevel } from "../../buttonsFunction";
 
 
 
-const LevelBox = ({ btnMenu }) => {
+const LevelBox = ({ btnMenu, setChangePage }) => {
   const [activeBtn, setActiveBtn] = useState(false);
 
-  const addingLevels = [1]
+  const [addingLevels, setAddingLevels] = useState([1])
 
 
   const arrayLevel = [];
   for (let i = 1; i <= 24; i++) {
-    arrayLevel.push(<button onClick={() => handleactiveLevel(i, setActiveBtn)} key={i} className={i === 1 ? `item-${i} ` : `item-${i} activeLevel`} disabled={addingLevels.includes(i) ? false : true} ><span>{i}</span> </button>)
+    arrayLevel.push(<button onClick={() => handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels, setChangePage)} key={i} className={addingLevels.includes(i) ? `item-${i} ` : `item-${i} activeLevel`} disabled={addingLevels.includes(i) ? activeBtn : true} ><span>{i}</span> </button>)
   }
 
   return (
@@ -25,7 +25,7 @@ const LevelBox = ({ btnMenu }) => {
         {arrayLevel}
       </div>
       <div className='btn-menu-div'>
-        <Buttons className='btn-menu' icon={btnMenu} onAction={handleMenu} />
+        <Buttons className='btn-menu' icon={btnMenu} onAction={() => handleMenu(setChangePage)} />
       </div>
     </>
   )

@@ -6,7 +6,7 @@ import { handleHome, handelInfo, handleReload } from "../../buttonsFunction";
 import BoxInfo from '../BoxInfo/BoxInfo';
 import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons';
 
-const TimeOver = ({ btnHome, btnInfo, btnReload }) => {
+const TimeOver = ({ btnHome, btnInfo, btnReload, setChangePage }) => {
   return (
     <div className='box-levelUp'>
       <Title text='Time Over' />
@@ -14,7 +14,7 @@ const TimeOver = ({ btnHome, btnInfo, btnReload }) => {
       <FlexBoxButtons>
         <Buttons icon={btnReload} onAction={handleReload} />
         <Buttons icon={btnInfo} onAction={handelInfo} />
-        <Buttons icon={btnHome} onAction={handleHome} />
+        <Buttons icon={btnHome} onAction={() => handleHome(setChangePage)} />
       </FlexBoxButtons>
     </div>
   )

@@ -5,7 +5,7 @@ import { handleSound, handleMusic, handleExpand, handleHelp, handlePlay } from "
 import './PageComp1.css'
 import FlexBoxButtons from '../../components/FlexBoxButtons/FlexBoxButtons'
 
-const PageComp1 = ({ btnSound, btnMusic, btnExpand, btnHelp, btnPlay }) => {
+const PageComp1 = ({ btnSound, btnMusic, btnExpand, btnHelp, btnPlay, setChangePage }) => {
   return (
     <>
       <div className='container-page1'>
@@ -19,7 +19,7 @@ const PageComp1 = ({ btnSound, btnMusic, btnExpand, btnHelp, btnPlay }) => {
           <Buttons icon={btnMusic} onAction={() => handleMusic()} />
           <Buttons icon={btnExpand} onAction={() => handleExpand()} />
           <Buttons icon={btnHelp} onAction={() => handleHelp()} />
-          <Buttons icon={btnPlay} onAction={() => handlePlay()} />
+          <Buttons icon={btnPlay} onAction={() => handlePlay(setChangePage)} />
         </FlexBoxButtons>
       </div>
     </>
