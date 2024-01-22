@@ -3,6 +3,7 @@ import './LevelBox.css'
 import Title from '../Title/Title';
 import Buttons from '../../components/Buttons/Buttons'
 import { handleMenu, handleactiveLevel } from "../../buttonsFunction";
+import monsters from '../../monstersArray';
 
 
 
@@ -24,6 +25,7 @@ const LevelBox = ({ btnMenu }) => {
       </div>
       <div className='btn-menu-div'>
         <Buttons className='btn-menu' icon={btnMenu} onAction={handleMenu} />
+        {monsters.map((item) => <img key={item.id} src={item.img} />)}
       </div>
     </>
   )
