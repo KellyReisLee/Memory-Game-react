@@ -13,25 +13,31 @@
 
 .level-box button{
   border-radius: 15px;
-  background-size:auto;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  /* background-position: center center; */
+  border: 2px solid grey;
+ 
   /* background-image: url('../../assets/question.png'); */
   
-  
 }
 
-.level-box img{
-  width: 100%;
-  
+.level-box span{
+ font-size: 2.7rem;
+ font-family: "Climate Crisis", sans-serif;
+ color: green;
+ 
+
 }
 
-.activeLevel{
+.activeLevel span{
   filter: grayscale(70%);
+  color: red;
 }
 
 .nonActive{
   filter:none;
+  
 }
 
 /*   {

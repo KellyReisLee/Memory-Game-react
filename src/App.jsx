@@ -52,6 +52,8 @@ function App() {
         {/* <TimeOver btnHome={btnHome} btnReload={btnReload} btnInfo={btnInfo} /> */}
 
       </Wrapper>
+
+
     </section>
   )
 }
