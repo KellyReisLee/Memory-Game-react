@@ -51,23 +51,24 @@ function App() {
   return (
     <section className='app'>
       <Wrapper>
-        {changePages === 'Home' && (
+        {/* {changePages === 'Home' && (
           <ContainerContent>
             <PageComp1 setChangePage={setChangePage} btnSound={btnSound} btnMusic={btnMusic} btnExpand={btnExpand} btnHelp={btnHelp} btnPlay={btnPlay} />
           </ContainerContent>
-        )}
-        {changePages === 'Levels' && (
+        )} */}
+        {/* {changePages === 'Levels' && (
           <LevelBox setChangePage={setChangePage} btnMenu={btnMenu} />
         )}
         {changePages === 'LevelUp' && (
           <LevelUp setChangePage={setChangePage} btnMenu={btnMenu} btnInfo={btnInfo} btnNextLevel={btnNextLevel} />
-        )}
-        {
+        )} */}
+        {/* {
           changePages === 'TimeOver' && (
             <TimeOver setChangePage={setChangePage} btnHome={btnHome} btnReload={btnReload} btnInfo={btnInfo} />
           )
-        }
-        {changePages === 'CardsMemory' && <CardsMemory setChangePage={setChangePage} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
+        } */}
+
+        {<CardsMemory setChangePage={setChangePage} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
 
 
 

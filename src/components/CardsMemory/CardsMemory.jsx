@@ -1,19 +1,32 @@
-import React from 'react'
-import monsters from '../../monstersArray'
+import React, { useEffect, useState, useRef } from 'react'
+import monstersList from '../../monstersArray'
 import Buttons from '../Buttons/Buttons'
 import BoxTime from '../BoxTime/BoxTime'
 import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons'
 import { handleMenu, handleReload, handleMusic, handleSound, handlePause } from "../../buttonsFunction";
 import './CardsMemory.css'
+import question from '../../assets/question.png'
+import CardMonster from '../CardMonster/CardMonster'
 
 const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChangePage }) => {
+  // const monstersRef = useRef(monsters);
+
+  const [clicked, setClicked] = useState([]);
+  const [monsters, setMonsters] = useState(monstersList.sort(() => Math.random() - 0.5))
+
+
+  function handleClickedMonster(id, index) {
+    console.log(id, index);
+
+  }
+
   return (
     <>
       <div className='monster-main'>
         <div className='monsters-box'>
-          {monsters.map((item) => <button className='item' key={item.id}>
-            <img src={item.img} />
-          </button>)}
+          {monsters.map((item, index) => (
+            <CardMonster key={item.id} onClickedMonster={() => handleClickedMonster(item.id, index)} index={index} monstersList={monstersList} />
+          ))}
         </div>
       </div>
       <div className='box-cards-memory-footer'>

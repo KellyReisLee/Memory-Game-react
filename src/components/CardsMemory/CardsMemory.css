@@ -47,6 +47,15 @@
   border: 7px solid rgb(187, 61, 15);
 
 }
+
+.questionImg{
+  background-image:url('../../assets/question.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: red;
+  
+}
 .monsters-box img{
   box-sizing:border-box;
   width: 100%;
