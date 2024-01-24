@@ -5,28 +5,65 @@ import BoxTime from '../BoxTime/BoxTime'
 import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons'
 import { handleMenu, handleReload, handleMusic, handleSound, handlePause } from "../../buttonsFunction";
 import './CardsMemory.css'
-import question from '../../assets/question.png'
+
 import CardMonster from '../CardMonster/CardMonster'
 
 const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChangePage }) => {
-  // const monstersRef = useRef(monsters);
-
-  const [clicked, setClicked] = useState([]);
-  const [monsters, setMonsters] = useState(monstersList.sort(() => Math.random() - 0.5))
 
 
-  function handleClickedMonster(id, index) {
-    console.log(id, index);
+
+  const [name, setName] = useState([]);
+  const [idList, setIdList] = useState([]);
+  const timeCard = useRef();
+  useEffect(() => {
+
+  }, [])
+
+  function handleClickedMonster(id, index, name) {
+    //console.log(name, index);
+
+    setIdList((prev) => {
+      if (!prev.includes(id) && prev.length < 2) {
+        return [...prev, id]
+      }
+      alert('Click on a different card or Wait to continue.')
+      return prev
+    })
+
+    setName((prev) => {
+      if (prev.length < 2) {
+        return [...prev, name]
+      }
+      return prev
+
+    })
+
+    if (name[0] !== name[1]) {
+      timeCard.current = setTimeout(() => {
+        setName([])
+        setIdList([])
+      }, 3000);
+
+    }
+
 
   }
+
+
+
 
   return (
     <>
       <div className='monster-main'>
         <div className='monsters-box'>
-          {monsters.map((item, index) => (
-            <CardMonster key={item.id} onClickedMonster={() => handleClickedMonster(item.id, index)} index={index} monstersList={monstersList} />
+          {monstersList.map((item, index) => (
+            <CardMonster idList={idList} key={item.id} id={item.id} name={name} onClickedMonster={() => handleClickedMonster(item.id, index, item.name)} index={index} monstersList={monstersList} />
           ))}
+          {/* {monstersList.map((item, index) => (
+            <button key={item.id} onClick={() => handleClickedMonster(item.name, index, item.id)} className='item ' >
+              <img src={item.img} alt={item.name} />
+            </button>
+          ))} */}
         </div>
       </div>
       <div className='box-cards-memory-footer'>
