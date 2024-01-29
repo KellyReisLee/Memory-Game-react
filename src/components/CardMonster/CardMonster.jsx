@@ -1,11 +1,12 @@
 
-import question from '../../assets/question.png'
 
-function CardMonster({ idList, monstersList, onClickedMonster, index, id }) {
 
+function CardMonster({ randomList, onClickedMonster, index }) {
+  console.log(randomList);
   return (
     <button onClick={() => onClickedMonster(index)} className='item ' >
-      <img src={idList.includes(id) ? monstersList[index].img : question} alt={monstersList[index].name} />
+      <div className="backSide"></div>
+      <img alt={randomList[index].name} />
     </button>
   )
 }
