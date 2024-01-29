@@ -8,8 +8,6 @@ import './CardsMemory.css'
 
 
 
-
-
 const items = ['monster1', 'monster2', 'monster3', 'monster4', 'monster5', 'monster6', 'monster7', 'monster8', 'monster9', 'monster10', 'monster11', 'monster12'];
 const randomList = [...monstersArray].sort(() => Math.random() - 0.5)
 const defaultState = { index: null, name: null };
@@ -54,9 +52,6 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
     <>
       <div className='monster-main'>
         <div className='monsters-box'>
-          {/* {monstersList.map((item, index) => (
-            <CardMonster key={item.id} onClickedMonster={() => handleClickedMonster(item.name, index)} randomList={randomList} />
-          ))} */}
 
           {randomList.map((item, index) => (
             <button
