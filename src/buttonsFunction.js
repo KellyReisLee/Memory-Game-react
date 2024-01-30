@@ -1,25 +1,52 @@
-export function handleSound() {
-  console.log('Sound');
+
+
+
+let click = new Audio('../src/assets/sounds/click.mp3')
+
+export function handleSound(setSound1, sound1) {
+  setSound1(() => !sound1)
+  if (sound1 === true) {
+    click.play()
+  }
+
+
 }
 
-export function handleMusic() {
+export function handleMusic(setSound2, sound2, sound1, playMusic) {
+  setSound2(() => !sound2)
   console.log('Music');
+  if (sound1 === true) {
+    click.play()
+  }
+  if (sound2 === false) {
+    playMusic.play()
+  }
+  else {
+    playMusic.pause()
+  }
 }
 
-export function handleExpand() {
-  console.log('Expand');
-}
 
-export function handleHelp() {
+export function handleHelp(sound1) {
+  if (sound1 === true) {
+    click.play()
+  }
   console.log('Help');
+  console.log(sound1)
 }
 
-export function handlePlay(setChangePage) {
-  setChangePage('Levels')
+export function handlePlay(setChangePages, sound1) {
+  if (sound1 === true) {
+    click.play()
+  }
+  setChangePages('Levels')
   console.log('Play');
 }
 
 export function handleMenu(setChangePage) {
+  if (sound1 === true) {
+    click.play()
+  }
   setChangePage('Home')
   console.log('Menu');
 }
