@@ -8,8 +8,8 @@ import Title from './components/Title/Title';
 import TimeOver from './components/TimeOver/TimeOver';
 import { useState, useEffect } from 'react'
 
-import './App.css';
 
+import './App.css';
 
 import VolumeUpRoundedIcon from '@mui/icons-material/VolumeUpRounded';
 import VolumeOffRoundedIcon from '@mui/icons-material/VolumeOffRounded';
@@ -29,27 +29,26 @@ import music from "../src/assets/sounds/music.mp3";
 const playMusic = new Audio(music);
 
 
-
-
-
 function App() {
 
   const [sound1, setSound1] = useState(true)
   const [sound2, setSound2] = useState(true)
   const [play, setPlay] = useState(true)
+  const [modalBox, setModalBox] = useState(false);
   const [changePages, setChangePages] = useState('Home');
 
 
-  const Playit = () => {
 
-    if (sound2) {
-      playMusic.play();
-    } else {
-      playMusic.pause()
-    }
+  // const Playit = () => {
 
-  }
-  useEffect(() => Playit(), [sound1]);
+  //   if (sound2) {
+  //     playMusic.play();
+  //   } else {
+  //     playMusic.pause()
+  //   }
+
+  // }
+  // useEffect(() => Playit(), [sound1]);
 
   let btnSound = (sound1 ? (<VolumeUpRoundedIcon sx={{ fontSize: 40 }} />) : (<VolumeOffRoundedIcon sx={{ fontSize: 40 }} />))
   let btnMusic = (sound2 ? (<MusicNoteRoundedIcon sx={{ fontSize: 40 }} />) : (<MusicOffRoundedIcon sx={{ fontSize: 40 }} />))
@@ -68,7 +67,20 @@ function App() {
       <Wrapper>
         {changePages === 'Home' && (
           <ContainerContent>
-            <PageComp1 playMusic={playMusic} sound1={sound1} sound2={sound2} setSound2={setSound2} setSound1={setSound1} setChangePage={setChangePages} btnSound={btnSound} btnMusic={btnMusic} btnExpand={btnExpand} btnHelp={btnHelp} btnPlay={btnPlay} />
+            <PageComp1
+              modalBox={modalBox}
+              setModalBox={setModalBox}
+              playMusic={playMusic}
+              sound1={sound1}
+              sound2={sound2}
+              setSound2={setSound2}
+              setSound1={setSound1}
+              setChangePages={setChangePages}
+              btnSound={btnSound}
+              btnMusic={btnMusic}
+              btnHelp={btnHelp}
+              btnPlay={btnPlay}
+            />
           </ContainerContent>
         )}
         {/* {changePages === 'Levels' && (

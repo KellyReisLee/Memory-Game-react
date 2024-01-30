@@ -1,0 +1,85 @@
+
+.modal {
+  border: none;
+  padding: 5rem;
+  background-color: rgb(249, 215, 202);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  animation: slide-in-from-top 0.35s ease-out;
+  
+}
+
+.modal-container{
+  width: 90%;
+}
+
+
+.modal::backdrop {
+   background: rgba(0, 0, 0, 0.9); 
+
+}
+
+.modal h2 {
+  font-family: 'Handjet', monospace;
+  margin: 0 0 0.25rem 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: rgb(204, 67, 18);
+}
+
+.modal p {
+  font-family: 'Handjet', monospace;
+  line-height:2.1rem;
+  margin: 4rem 0;
+  font-size: 1.6rem;
+  color: rgb(73, 72, 72);
+}
+
+.modal-btn {
+  margin-top: 1rem;
+  padding: 1.7rem 2rem;
+  border: none;
+  border-radius: 35px;
+  background-color: rgb(254, 105, 51);
+  color: #edfcfa;
+  font-size: 1.7rem;
+  cursor: pointer;
+  animation:move-btn ease-in-out  2s infinite;
+ 
+}
+
+.modal button:hover {
+  background-color: rgb(204, 67, 18);
+  
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes move-btn{
+  0% {
+    
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(1.05);
+   
+   
+  }
+}
+
+
+

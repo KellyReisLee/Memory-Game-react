@@ -27,12 +27,12 @@ export function handleMusic(setSound2, sound2, sound1, playMusic) {
 }
 
 
-export function handleHelp(sound1) {
+export function handleHelp(sound1, setModalBox, modalBox, handleOpen) {
+  setModalBox(() => !modalBox)
+  handleOpen()
   if (sound1 === true) {
     click.play()
   }
-  console.log('Help');
-  console.log(sound1)
 }
 
 export function handlePlay(setChangePages, sound1) {
