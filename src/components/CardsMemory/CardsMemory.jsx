@@ -5,7 +5,7 @@ import BoxTime from '../BoxTime/BoxTime'
 import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons'
 import { handleMenu, handleReload, handleMusic, handleSound, handlePause } from "../../buttonsFunction";
 import './CardsMemory.css'
-
+let click = new Audio('../src/assets/sounds/click.mp3')
 
 
 const items = ['monster1', 'monster2', 'monster3', 'monster4', 'monster5', 'monster6', 'monster7', 'monster8', 'monster9', 'monster10', 'monster11', 'monster12'];
@@ -13,7 +13,8 @@ const randomList = [...monstersArray].sort(() => Math.random() - 0.5)
 const defaultState = { index: null, name: null };
 
 
-const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChangePage }) => {
+const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChangePages, sound1, setSound1, playMusic, setSound2, sound2 }) => {
+
   const [firstCard, setFirstCard] = useState(defaultState);
   const [secondCard, setSecondCard] = useState(defaultState);
   const [remainingCards, setRemainingCards] = useState(items);
@@ -21,6 +22,9 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
   const timer = useRef();
 
   function handleClickedMonster(index, name) {
+    if (sound1 === true) {
+      click.play()
+    }
     console.log(name, index);
     console.log(remainingCards);
     clearTimeout(timer.current);
@@ -81,11 +85,11 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
         </FlexBoxButtons>
 
         <FlexBoxButtons >
-          <Buttons className='btn-menu' icon={btnSound} onAction={() => handleSound(setChangePage)} />
-          <Buttons className='btn-menu' icon={btnMusic} onAction={() => handleMusic(setChangePage)} />
-          <Buttons className='btn-menu' icon={btnReload} onAction={() => handleReload(setChangePage)} />
-          <Buttons className='btn-menu' icon={btnMenu} onAction={() => handleMenu(setChangePage)} />
-          <Buttons className='btn-menu' icon={btnPause} onAction={() => handlePause(setChangePage)} />
+          <Buttons className='btn-menu' icon={btnSound} onAction={() => handleSound(setSound1, sound1)} />
+          <Buttons className='btn-menu' icon={btnMusic} onAction={() => handleMusic(setSound2, sound2, sound1, playMusic)} />
+          <Buttons className='btn-menu' icon={btnReload} onAction={() => handleReload(sound1, setChangePages)} />
+          <Buttons className='btn-menu' icon={btnMenu} onAction={() => handleMenu(sound1, setChangePages)} />
+          <Buttons className='btn-menu' icon={btnPause} onAction={() => handlePause(setChangePages)} />
         </FlexBoxButtons>
       </div>
 

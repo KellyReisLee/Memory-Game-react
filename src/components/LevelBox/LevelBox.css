@@ -1,10 +1,9 @@
 .level-box{
   display: grid;
   width: 100%;
-  height: 100%;
+  height: 30%;
   align-content: stretch;    
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   padding: 1rem 4rem;
   gap: 1rem;
   grid-template-rows: auto;
@@ -17,13 +16,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   border: 2px solid grey;
- 
-  /* background-image: url('../../assets/question.png'); */
-  
+  cursor: pointer;
 }
 
 .level-box span{
- font-size: 2.7rem;
+ font-size: 5rem;
  font-family: "Climate Crisis", sans-serif;
  color: green;
  
@@ -36,24 +33,18 @@
 }
 
 .nonActive{
-  filter:none;
-  
+  filter:none; 
 }
 
-/*   {
-  grid-row: 1 ;
-}
-.item-6, .item-7, .item-8, .item-9, .item-10 {
-  grid-row: 2 ;
-}
-.item-11, .item-12, .item-13, .item-14, .item-15 {
- grid-row: 3
-} */
+
 
 .btn-menu-div{
   display: flex;
   align-self: flex-end;
-  margin: 0.5rem 2rem;
+  margin: 3rem 2rem;
+  height: 10%;
+  width: 7%;
+  
 }
 
 

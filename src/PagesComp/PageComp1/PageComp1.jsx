@@ -6,13 +6,10 @@ import { handleSound, handleMusic, handleHelp, handlePlay } from "../../buttonsF
 import './PageComp1.css'
 import FlexBoxButtons from '../../components/FlexBoxButtons/FlexBoxButtons'
 import Modal from '../../components/Modal/Modal'
-let click = new Audio('../src/assets/sounds/click.mp3')
+
 
 const PageComp1 = ({ playMusic, setSound2, btnSound, btnMusic, btnHelp, btnPlay, setChangePages, setSound1, sound1, sound2, modalBox, setModalBox }) => {
 
-  const handleOpen = () => {
-    setModalBox(true)
-  };
 
 
   return (
@@ -22,13 +19,13 @@ const PageComp1 = ({ playMusic, setSound2, btnSound, btnMusic, btnHelp, btnPlay,
       <div className='container-page1'>
         <div>
           <Title text='Memory Game' />
-          <h3>Monsters</h3>
+          <h3 className='sub-title'>Monsters</h3>
         </div>
 
         <FlexBoxButtons>
           <Buttons icon={btnSound} onAction={() => handleSound(setSound1, sound1)} />
           <Buttons icon={btnMusic} onAction={() => handleMusic(setSound2, sound2, sound1, playMusic)} />
-          <Buttons icon={btnHelp} onAction={() => handleHelp(sound1, setModalBox, modalBox, handleOpen)} />
+          <Buttons icon={btnHelp} onAction={() => handleHelp(sound1, setModalBox, modalBox)} />
           <Buttons icon={btnPlay} onAction={() => handlePlay(setChangePages, sound1)} />
         </FlexBoxButtons>
       </div>

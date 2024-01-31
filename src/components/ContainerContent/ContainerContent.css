@@ -3,13 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blueviolet;
+  background-color: rgb(238, 206, 194);
   width: 95%;
   height: 90%;
-  
+ 
 }
 
-.container h3{
-  font-size: 4rem;
-  color: rgb(212, 208, 208);
-}

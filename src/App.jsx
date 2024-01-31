@@ -83,22 +83,22 @@ function App() {
             />
           </ContainerContent>
         )}
-        {/* {changePages === 'Levels' && (
-          <LevelBox setChangePage={setChangePage} btnMenu={btnMenu} />
+
+        {changePages === 'Levels' && (
+          <LevelBox sound1={sound1} setChangePages={setChangePages} btnMenu={btnMenu} />
         )}
-        {changePages === 'LevelUp' && (
-          <LevelUp setChangePage={setChangePage} btnMenu={btnMenu} btnInfo={btnInfo} btnNextLevel={btnNextLevel} />
+
+        {/* {changePages === 'LevelUp' && (
+          <LevelUp setChangePages={setChangePages} btnMenu={btnMenu} btnInfo={btnInfo} btnNextLevel={btnNextLevel} />
         )} */}
+
         {/* {
           changePages === 'TimeOver' && (
             <TimeOver setChangePage={setChangePage} btnHome={btnHome} btnReload={btnReload} btnInfo={btnInfo} />
           )
         } */}
 
-        {/* {<CardsMemory setChangePage={setChangePage} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />} */}
-
-
-
+        {changePages === 'CardsMemory' && <CardsMemory playMusic={playMusic} sound2={sound2} setSound2={setSound2} setSound1={setSound1} sound1={sound1} setChangePages={setChangePages} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
 
       </Wrapper>
 

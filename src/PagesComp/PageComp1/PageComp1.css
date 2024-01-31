@@ -7,3 +7,9 @@
   gap: 4rem;
 
 }
+
+.sub-title{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(112, 109, 109);
+  font-size: 3rem;
+}

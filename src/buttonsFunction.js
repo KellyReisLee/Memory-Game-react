@@ -27,12 +27,12 @@ export function handleMusic(setSound2, sound2, sound1, playMusic) {
 }
 
 
-export function handleHelp(sound1, setModalBox, modalBox, handleOpen) {
-  setModalBox(() => !modalBox)
-  handleOpen()
+export function handleHelp(sound1, setModalBox, modalBox) {
   if (sound1 === true) {
     click.play()
   }
+  setModalBox(() => !modalBox)
+  console.log('help');
 }
 
 export function handlePlay(setChangePages, sound1) {
@@ -43,11 +43,11 @@ export function handlePlay(setChangePages, sound1) {
   console.log('Play');
 }
 
-export function handleMenu(setChangePage) {
+export function handleMenu(sound1, setChangePages) {
   if (sound1 === true) {
     click.play()
   }
-  setChangePage('Home')
+  setChangePages('Home');
   console.log('Menu');
 }
 
@@ -61,7 +61,14 @@ export function handleNextGame() {
 }
 
 
-export function handleReload() {
+export function handleReload(sound1, setChangePages) {
+  if (sound1 === true) {
+    click.play()
+  }
+
+  setChangePages('CardsMemory')
+
+
   console.log('Reload');
 }
 
@@ -76,8 +83,11 @@ export function handlePause() {
 }
 
 // On Levels Component:
-export function handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels, setChangePage) {
-  console.log(addingLevels);
+export function handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels, setChangePages, sound1) {
+  if (sound1 === true) {
+    click.play()
+  }
+
   setAddingLevels((prev) => {
     if (addingLevels.includes(i)) {
       return prev
@@ -88,14 +98,7 @@ export function handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels
   })
 
   // setActiveBtn(() => !setActiveBtn)
-  setChangePage('CardsMemory')
-
+  setChangePages('CardsMemory')
+  console.log(addingLevels);
   console.log(i);
 }
-
-
-
-
-
-
-

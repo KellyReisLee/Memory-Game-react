@@ -6,6 +6,7 @@
     box-sizing: border-box;
     text-decoration: none;
     text-align: center;
+    cursor: url('../src/assets/hand.png');
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #535bf2;
+ 
 }
 
 h1 {
