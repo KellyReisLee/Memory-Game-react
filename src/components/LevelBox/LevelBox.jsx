@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './LevelBox.css'
 import Title from '../Title/Title';
 import Buttons from '../../components/Buttons/Buttons'
-import { handleMenu, handleactiveLevel } from "../../buttonsFunction";
+import { handleMenu, handleactiveLevel } from "../../util/buttonsFunction";
 
 
 

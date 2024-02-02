@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react'
-import monstersArray from '../../monstersArray'
+import monstersArray from '../../util/monstersArray'
 import Buttons from '../Buttons/Buttons'
 import BoxTime from '../BoxTime/BoxTime'
 import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons'
-import { handleMenu, handleReload, handleMusic, handleSound, handlePause } from "../../buttonsFunction";
+import { handleMenu, handleReload, handleMusic, handleSound, handlePause } from "../../util/buttonsFunction";
 import './CardsMemory.css'
 let click = new Audio('../src/assets/sounds/click.mp3')
 
@@ -18,7 +18,7 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
   const [firstCard, setFirstCard] = useState(defaultState);
   const [secondCard, setSecondCard] = useState(defaultState);
   const [remainingCards, setRemainingCards] = useState(items);
-  const [moves, setMoves] = useState(0);
+  const [level, setLevel] = useState(1);
   const timer = useRef();
 
   function handleClickedMonster(index, name) {
@@ -40,10 +40,10 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
     ) {
       setSecondCard(defaultState);
       setFirstCard({ index, name });
-      setMoves((moves) => moves + 1);
+
     } else if (secondCard.index === null && firstCard.index !== index) {
       setSecondCard({ index, name });
-      setMoves((moves) => moves + 1);
+
 
       if (firstCard.name === name) {
         setRemainingCards(remainingCards.filter((card) => card !== name));
@@ -81,7 +81,7 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
         <FlexBoxButtons>
           <BoxTime title='Time' value='2:30' />
           <BoxTime title='Score' value='1800 points' />
-          <BoxTime title='Level' value='1' />
+          <BoxTime title='Level' value={level} />
         </FlexBoxButtons>
 
         <FlexBoxButtons >

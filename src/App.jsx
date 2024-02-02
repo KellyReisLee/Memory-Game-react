@@ -1,7 +1,7 @@
 
 import Wrapper from './components/Wrapper/Wrapper'
 import ContainerContent from './components/ContainerContent/ContainerContent';
-import PageComp1 from '../src/PagesComp/PageComp1/PageComp1';
+import PageComp1 from './components/PageComp1/PageComp1';
 import CardsMemory from './components/CardsMemory/CardsMemory';
 import LevelBox from './components/LevelBox/LevelBox';
 import Title from './components/Title/Title';

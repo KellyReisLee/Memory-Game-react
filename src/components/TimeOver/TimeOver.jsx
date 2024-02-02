@@ -2,7 +2,7 @@ import React from 'react'
 import './TimeOver.css'
 import Title from '../Title/Title'
 import Buttons from '../Buttons/Buttons';
-import { handleHome, handelInfo, handleReload } from "../../buttonsFunction";
+import { handleHome, handelInfo, handleReload } from "../../util/buttonsFunction";
 import BoxInfo from '../BoxInfo/BoxInfo';
 import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons';
 

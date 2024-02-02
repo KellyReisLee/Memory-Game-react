@@ -1,11 +1,11 @@
 
-import Title from '../../components/Title/Title';
-import Buttons from '../../components/Buttons/Buttons'
-import { handleSound, handleMusic, handleHelp, handlePlay } from "../../buttonsFunction";
+import Title from '../Title/Title';
+import Buttons from '../Buttons/Buttons'
+import { handleSound, handleMusic, handleHelp, handlePlay } from "../../util/buttonsFunction";
 
 import './PageComp1.css'
-import FlexBoxButtons from '../../components/FlexBoxButtons/FlexBoxButtons'
-import Modal from '../../components/Modal/Modal'
+import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons'
+import Modal from '../Modal/Modal'
 
 
 const PageComp1 = ({ playMusic, setSound2, btnSound, btnMusic, btnHelp, btnPlay, setChangePages, setSound1, sound1, sound2, modalBox, setModalBox }) => {
