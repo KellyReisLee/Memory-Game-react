@@ -83,16 +83,16 @@ export function handlePause() {
 }
 
 // On Levels Component:
-export function handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels, setChangePages, sound1) {
+export function handleactiveLevel(addingLevels, item, setActiveBtn, setAddingLevels, setChangePages, sound1) {
   if (sound1 === true) {
     click.play()
   }
 
   setAddingLevels((prev) => {
-    if (addingLevels.includes(i)) {
+    if (addingLevels.includes(item)) {
       return prev
     } else {
-      return [...prev, i]
+      return [...prev, item]
     }
 
   })
@@ -100,5 +100,5 @@ export function handleactiveLevel(addingLevels, i, setActiveBtn, setAddingLevels
   // setActiveBtn(() => !setActiveBtn)
   setChangePages('CardsMemory')
   console.log(addingLevels);
-  console.log(i);
+
 }
