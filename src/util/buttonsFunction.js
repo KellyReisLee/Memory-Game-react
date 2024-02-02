@@ -19,6 +19,8 @@ export function handleMusic(setSound2, sound2, sound1, playMusic) {
     click.play()
   }
   if (sound2 === false) {
+
+
     playMusic.play()
   }
   else {
