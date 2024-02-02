@@ -36,6 +36,7 @@ function App() {
   const [play, setPlay] = useState(true)
   const [modalBox, setModalBox] = useState(false);
   const [changePages, setChangePages] = useState('Home');
+  const [level, setLevel] = useState(0);
 
 
 
@@ -99,7 +100,7 @@ function App() {
         } */}
 
       </Wrapper>
-      {changePages === 'CardsMemory' && <CardsMemory playMusic={playMusic} sound2={sound2} setSound2={setSound2} setSound1={setSound1} sound1={sound1} setChangePages={setChangePages} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
+      {changePages === 'CardsMemory' && <CardsMemory level={level} setLevel={setLevel} playMusic={playMusic} sound2={sound2} setSound2={setSound2} setSound1={setSound1} sound1={sound1} setChangePages={setChangePages} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
 
 
     </section>

@@ -11,13 +11,13 @@ let click = new Audio('../src/assets/sounds/click.mp3')
 
 const defaultState = { index: null, name: null };
 const lists = [monstersArray1, monstersArray2, monstersArray3, monstersArray4, monstersArray5]
-const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChangePages, sound1, setSound1, playMusic, setSound2, sound2 }) => {
+const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChangePages, sound1, setSound1, playMusic, setSound2, sound2, setLevel, level }) => {
 
 
   const [firstCard, setFirstCard] = useState(defaultState);
   const [secondCard, setSecondCard] = useState(defaultState);
   const [remainingCards, setRemainingCards] = useState(items);
-  const [level, setLevel] = useState(0)
+
   const [listLevel, setListLevel] = useState(lists[level])
 
   const timer = useRef();
