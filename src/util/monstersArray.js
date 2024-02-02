@@ -10,9 +10,17 @@ import monster9 from '../assets/monsters/monster9.png'
 import monster10 from '../assets/monsters/monster10.png'
 import monster11 from '../assets/monsters/monster11.png'
 import monster12 from '../assets/monsters/monster12.png'
+import monster13 from '../assets/monsters/monster13.png'
+import monster14 from '../assets/monsters/monster14.png'
+import monster15 from '../assets/monsters/monster1.png'
 
 
-const monsters = [
+// level 5:
+export const items = ['monster1', 'monster2', 'monster3', 'monster4', 'monster5', 'monster6', 'monster7', 'monster8', 'monster9', 'monster10', 'monster11', 'monster12', 'monster13', 'monster14', 'monster15'];
+
+
+
+export const monstersArray = [
   {
     id: 1,
     name: 'monster1',
@@ -75,64 +83,35 @@ const monsters = [
   },
   {
     id: 13,
-    name: 'monster1',
-    img: monster1
+    name: 'monster13',
+    img: monster13
   },
   {
     id: 14,
-    name: 'monster2',
-    img: monster2
+    name: 'monster14',
+    img: monster14
   },
-  {
-    id: 15,
-    name: 'monster3',
-    img: monster3
-  },
-  {
-    id: 16,
-    name: 'monster4',
-    img: monster4
-  },
-  {
-    id: 17,
-    name: 'monster5',
-    img: monster5
-  },
-  {
-    id: 18,
-    name: 'monster6',
-    img: monster6
-  },
-  {
-    id: 19,
-    name: 'monster7',
-    img: monster7
-  },
-  {
-    id: 20,
-    name: 'monster8',
-    img: monster8
-  },
-  {
-    id: 21,
-    name: 'monster9',
-    img: monster9
-  },
-  {
-    id: 22,
-    name: 'monster10',
-    img: monster10
-  },
-  {
-    id: 23,
-    name: 'monster11',
-    img: monster11
-  },
-  {
-    id: 24,
-    name: 'monster12',
-    img: monster12
-  }
+
+
 ]
 
-export default monsters
+
+// Level 1:
+const doubleList = [...monstersArray, ...monstersArray]
+console.log(doubleList);
+
+const itemsListOrder = doubleList.sort((a, b) => {
+  return a.name.localeCompare(b.name);
+});
+
+export const monstersArray1 = itemsListOrder.slice(0, 12).sort(() => Math.random() - 0.5);
+export const monstersArray2 = itemsListOrder.slice(0, 16).sort(() => Math.random() - 0.5);
+export const monstersArray3 = itemsListOrder.slice(0, 20).sort(() => Math.random() - 0.5);
+export const monstersArray4 = itemsListOrder.slice(0, 24).sort(() => Math.random() - 0.5);
+export const monstersArray5 = itemsListOrder.slice(0, 28).sort(() => Math.random() - 0.5);
+
+
+console.log(monstersArray1, monstersArray2, monstersArray3, monstersArray4, monstersArray5);
+
+
+

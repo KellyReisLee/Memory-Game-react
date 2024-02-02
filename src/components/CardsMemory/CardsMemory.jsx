@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react'
-import monstersArray from '../../util/monstersArray'
+import React, { useState, useRef, useEffect } from 'react'
+import { monstersArray1, monstersArray2, monstersArray3, monstersArray4, monstersArray5, items } from '../../util/monstersArray'
 import Buttons from '../Buttons/Buttons'
 import BoxTime from '../BoxTime/BoxTime'
 import FlexBoxButtons from '../FlexBoxButtons/FlexBoxButtons'
@@ -8,18 +8,25 @@ import './CardsMemory.css'
 let click = new Audio('../src/assets/sounds/click.mp3')
 
 
-const items = ['monster1', 'monster2', 'monster3', 'monster4', 'monster5', 'monster6', 'monster7', 'monster8', 'monster9', 'monster10', 'monster11', 'monster12'];
-const randomList = [...monstersArray].sort(() => Math.random() - 0.5)
+
 const defaultState = { index: null, name: null };
-
-
+const lists = [monstersArray1, monstersArray2, monstersArray3, monstersArray4, monstersArray5]
 const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChangePages, sound1, setSound1, playMusic, setSound2, sound2 }) => {
+
 
   const [firstCard, setFirstCard] = useState(defaultState);
   const [secondCard, setSecondCard] = useState(defaultState);
   const [remainingCards, setRemainingCards] = useState(items);
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(4)
+  const [listLevel, setListLevel] = useState(lists[level])
+
   const timer = useRef();
+
+  useEffect(() => {
+    setListLevel((prev) => prev.sort(() => Math.random() - 1))
+  }, [level])
+
+  console.log(listLevel);
 
   function handleClickedMonster(index, name) {
     if (sound1 === true) {
@@ -55,12 +62,12 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
   return (
     <>
       <div className='monster-main'>
-        <div className='monsters-box'>
+        <div className={`monsters-box display-box${level}`}>
 
-          {randomList.map((item, index) => (
+          {listLevel.map((item, index) => (
             <button
               key={index}
-              className={`item ${(firstCard.index === index ||
+              className={`item item-width ${(firstCard.index === index ||
                 secondCard.index === index ||
                 !remainingCards.includes(item.name)) &&
                 "flipped"
@@ -78,11 +85,11 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
         </div>
       </div>
       <div className='box-cards-memory-footer'>
-        <FlexBoxButtons>
+        <div className='box-card-score'>
           <BoxTime title='Time' value='2:30' />
           <BoxTime title='Score' value='1800 points' />
-          <BoxTime title='Level' value={level} />
-        </FlexBoxButtons>
+          <BoxTime title='Level' value={level < 5 ? level + 1 : 0} />
+        </div>
 
         <FlexBoxButtons >
           <Buttons className='btn-menu' icon={btnSound} onAction={() => handleSound(setSound1, sound1)} />
