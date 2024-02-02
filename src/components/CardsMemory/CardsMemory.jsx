@@ -17,7 +17,7 @@ const CardsMemory = ({ btnMenu, btnMusic, btnSound, btnReload, btnPause, setChan
   const [firstCard, setFirstCard] = useState(defaultState);
   const [secondCard, setSecondCard] = useState(defaultState);
   const [remainingCards, setRemainingCards] = useState(items);
-  const [level, setLevel] = useState(4)
+  const [level, setLevel] = useState(0)
   const [listLevel, setListLevel] = useState(lists[level])
 
   const timer = useRef();

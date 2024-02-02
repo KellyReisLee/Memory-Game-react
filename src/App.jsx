@@ -64,7 +64,7 @@ function App() {
 
   return (
     <section className='app'>
-      <Wrapper>
+      <Wrapper changePages={changePages} >
         {changePages === 'Home' && (
           <ContainerContent>
             <PageComp1
@@ -98,9 +98,8 @@ function App() {
           )
         } */}
 
-        {changePages === 'CardsMemory' && <CardsMemory playMusic={playMusic} sound2={sound2} setSound2={setSound2} setSound1={setSound1} sound1={sound1} setChangePages={setChangePages} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
-
       </Wrapper>
+      {changePages === 'CardsMemory' && <CardsMemory playMusic={playMusic} sound2={sound2} setSound2={setSound2} setSound1={setSound1} sound1={sound1} setChangePages={setChangePages} btnMenu={btnMenu} btnSound={btnSound} btnMusic={btnMusic} btnReload={btnReload} btnPause={btnPause} />}
 
 
     </section>

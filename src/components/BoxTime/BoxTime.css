@@ -1,17 +1,16 @@
-.box-time{
-  font-size: 0.8rem; 
-}
 
 .box-time h2{
+  font-size: 1rem;
   margin-top: 1.7rem;
-  border: 2px solid white;
-  padding: 0.2rem 1.3rem;
+  border: 1px solid white;
+  padding: 0.3rem 2rem;
   border-radius: 10px;
+  letter-spacing: 1.7px;
 }
 
 .box-time p{
   font-size: 1.4rem;
-  margin-top: 0;
+  margin-top: 0rem;
 }
 .box-card-score{
   display: flex;
@@ -19,4 +18,5 @@
   justify-content: space-around;
   padding:2rem 0;
   gap: 1.5rem;
+  
 }

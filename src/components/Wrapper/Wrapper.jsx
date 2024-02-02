@@ -1,9 +1,9 @@
 import React from 'react'
 import './Wrapper.css'
 
-const Wrapper = ({ children }) => {
+const Wrapper = ({ children, changePages }) => {
   return (
-    <div className='wrapper'>
+    <div className={changePages === 'CardsMemory' ? 'wrapper-display' : 'wrapper'}>
       {children}
     </div>
   )
