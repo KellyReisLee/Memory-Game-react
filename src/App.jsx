@@ -32,7 +32,7 @@ const playMusic = new Audio(music);
 function App() {
 
   const [sound1, setSound1] = useState(true)
-  const [sound2, setSound2] = useState(true)
+  const [sound2, setSound2] = useState(false)
   const [play, setPlay] = useState(true)
   const [modalBox, setModalBox] = useState(false);
   const [changePages, setChangePages] = useState('Home');
